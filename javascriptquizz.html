@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:lightblue;">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<title>javascript quizz</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<h1>Imunology</h1>
+				<label for=""><b>CH</b></label><br>
+				<input class="form-control" type="text" onchange="percentage();" id="ads"><br>
+				<label for=""><b>Grades</b></label><br>
+				<input class="form-control" type="text" onchange="percentage();" id="grades"><br>
+				<label for=""><b>GPA</b></label><br>
+				<input class="form-control" type="text" onchange="percentage();" id="grades_gpa"><br>
+			</div>
+			<div class="col-lg-3">
+				<h1>Enzymology</h1>
+				<label for=""><b>CH</b></label><br>
+				<input class="form-control" type="text" onchange="percentage();" id="ads_numb"><br>
+				<label for=""><b>Grades</b></label><br>
+				<input class="form-control" type="text" onchange="percentage();" id="grades_enzym"><br>
+				<label for=""><b>GPA</b></label><br>
+				<input class="form-control" type="text" onchange="percentage();" id="grades_text"><br>
+			</div>
+			<div class="col-lg-4">
+				<h1>Metabolism</h1>
+				<label for=""><b>CH</b></label><br>
+				<input class="form-control" type="text" onchange="percentage();" id="ads_cell"><br>
+				<label for=""><b>Grades</b></label><br>
+				<input class="form-control" type="text" onchange="percentage();" id="grades_cellular"><br>
+				<label for=""><b>GPA</b></label><br>
+				<input class="form-control" type="text" onchange="percentage();" id="grades_signal"><br>
+			</div>
+		</div><br><br><hr>
+		<div class="row">
+			<div class="col-lg-4 ">
+				<label><b>CGPA</b></label><br>
+				<input class="form-control" type="text" onchange="percentage():" id="calculate_cgpa">
+			</div>
+			<div class="col-4" id="result"></div>
+		</div>
+	</div>
+
+</body>
+</html>
+<!-- organic chemistry -->
+<script type="text/javascript">
+	function percentage(){
+		var n1=Number(document.getElementById('ads').value);
+		var n2=Number(document.getElementById('grades').value);
+		var rs1=n1*n2;
+		document.getElementById('grades_gpa').value=rs1;
+	// enzymology:
+		var n3=Number(document.getElementById('ads_numb').value);
+		var n4=Number(document.getElementById('grades_enzym').value);
+		var rs2=n3*n4;
+		document.getElementById('grades_text').value=rs2;
+	// cellular signaling:
+		var n5=Number(document.getElementById('ads_cell').value);
+		var n6=Number(document.getElementById('grades_cellular').value);
+		var rs3=n5*n6;
+		document.getElementById('grades_signal').value=rs3;
+	// result:
+		var CH=n2+n4+n6;
+		var GPA=rs1+rs2+rs3;
+		var CGPA=GPA/CH;
+		document.getElementById('calculate_cgpa').value=CGPA;
+	
+	if (CGPA>2.5){
+		document.getElementById('result').innerHTML="<h2>Passed</h2>";
+	}
+	else {
+		document.getElementById('result').innerHTML="<h2>Failed</h2>";
+	}
+}
+</script>

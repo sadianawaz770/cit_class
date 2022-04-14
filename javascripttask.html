@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+			<h1>1st Transection of Mangos</h1>
+			<label for="">Quantity</label><br>
+			<input type="text" onchange="discount();" id="mango"><br>
+			<label for="">Price of Quantity</label><br>
+			<input type="text" onchange="discount();" id="mango_price"><br>	
+			<label for="">Total Price</label><br>
+			<input type="text" onchange="discount();" id="tp_mango"><br>
+			<label for="">final price</label><br>
+			<input type="text" id="tmango_price">
+		</div>
+		<div class="col-lg-4">
+			<h1>2nd Transection of Apples</h1>
+			<label for="">Quantity</label><br>
+			<input type="text" onchange="discount();" id="apple"><br>
+			<label for="">Price of Quantity</label><br>
+			<input type="text" onchange="discount();" id="apple_price"><br>	<label for="">Total Price</label><br>
+			<input type="text" onchange="discount();" id="tp_apple"><br>
+			<label for="">final price</label><br>
+			<input type="text" id="tapple_price">
+		</div>
+		<div class="col-lg-4">
+			<h1>Total Amount</h1>
+			<label for="">total price of two transection</label><br>
+			<input type="text" id="two_price" onchange="discount();"><br>
+			<label for="">transection discount</label><br>
+			<input type="text" id="both_discount" onchange="discount();"><br>
+			<label for="">Total Bill</label><br>
+			<input type="text" id="bill">
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+<!-- first transection -->
+<script type="text/javascript">
+	function discount(){
+		var n1=Number(document.getElementById('mango').value);
+		var n2=Number(document.getElementById('mango_price').value);
+		var rs1=n1*n2;
+		document.getElementById('tp_mango').value=rs1;
+		var total_price=rs1*10/100;
+		document.getElementById('tmango_price').value=total_price;
+		// second transection:
+		var n1=Number(document.getElementById('apple').value);
+		var n2=Number(document.getElementById('apple_price').value);
+		var rs2=n1*n2;
+		document.getElementById('tp_apple').value=rs2;
+		var total_price2=rs2*10/100;
+		document.getElementById('tapple_price').value=total_price2;
+		// total cash:
+		var total_cash=rs1+rs2;
+		document.getElementById('two_price').value=total_cash;
+		// discount:
+		var total_dis=total_price+total_price2;
+		document.getElementById('both_discount').value=total_dis;
+		var mybill=total_cash-total_dis;
+		document.getElementById('bill').value=mybill;
+	}
+</script>

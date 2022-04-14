@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>today</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+
+	
+	<!-- <button onclick="Myfunction()">submit</button> -->
+	
+	<!-- <div><p>tyityot troty fjddg jsfsf</p></div><br><br><br> -->
+   
+
+   <input type="text"  id="one"><br>
+   <input type="text"  id="two"><br>
+	 
+	 <button onclick="calculate_percentage()" id="hight">division</button><br>
+<button>send</button>
+</body>
+</html>
+
+<style type="text/css">
+	body{
+		background-color:pink;
+		color: rgb(127, 17, 17);
+		font-family:Impact,haettenschweiler, 'Ariel  Narrow Bold',sans-serif;
+		font-size:16px ;
+      }
+
+      .color_theme {
+      	background-color: rgb(127, 17, 17);
+      	font-family:Impact,haettenschweiler, 'Ariel  Narrow Bold',sans-serif;
+      	font-size:26px ;
+      	color: darkred;
+		
+      }
+</style>
+
+<script >
+	 function Myfunction(){
+	 	var element=document.body;
+	 	element.Classlist.toggle("color_theme");
+	 }
+
+ 		document.getElementById("height").onclick=function calculate_percentage(){
+    var marks=document.getElementById("one").value;
+    var total_marks=(your_marks/1100)*100;
+    document.getElementById("two").value=total_marks;
+
+
+   }
+ 		
+</script>
+ 
+
+
+
+  

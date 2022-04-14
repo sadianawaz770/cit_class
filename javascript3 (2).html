@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button onclick="MyFunction()">Change text</button>
+	<div>
+		<p>Sir Isaac Newton 25 December 1642 – 20 March 1726/27 was an English mathematician, physicist, astronomer, alchemist, theologian, and author (described in his time as a "natural philosopher") widely recognised as one of the greatest mathematicians and physicists of all time and among the most influential scientists. He was a key figure in the philosophical revolution known as the Enlightenment.</p>
+	</div><br><br>
+	
+	<h1>class task</h1>
+	<input type="text" id="div1"><br>
+	<input type="text" id="div2"><br>
+	<button class="btn btn-primary" id="divide" onclick="division()">percentage</button>
+	<!-- <div id="div3"></div> 
+
+ -->
+</body>
+</html>
+<style>
+	/*body{
+		background-color: white;
+		color: rgb(172, 17, 17);
+		font-family: Impact, haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-size: 15px;
+	}
+	.color_theme{
+		background-color: rgb(172, 33, 33);
+		font-family: Impact, haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-size: 25px;
+		color:white;
+	}*/
+</style> 
+<script>
+	<!-- MyFunction -->
+		function MyFunction(){
+		var element=document.body;
+		element.classList.toggle("color_theme");
+	}
+	// division:
+	document.getElementById("divide").onclick= function division(){
+		var your_marks=document.getElementById("div1").value;
+		var total2=(your_marks/1100)*100;
+		document.getElementById("div2").value=total2;
+	}
+</script>

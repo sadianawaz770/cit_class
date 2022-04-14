@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>next</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	
+</head>
+<body>
+	<div class="container">
+          <div class="row">
+				<div class="col col-6">
+
+	            <h1>Quantity</h1>
+	            <label for="">Quantity</label>
+	            <input type="text" onchange="discount()" ; id="mango"><br><br>
+	             
+	            <label for="">Price of Quantity</label>
+	            <input type="text" onchange="discount()" ; id="mango_price"><br><br>
+
+	             <label for="">Total Price</label>
+	            <input type="text" onchange="discount()" ; id="tp_mango">
+
+	            <label for="">Final price</label>
+	            <input type="text" id="tmango_price">
+	        </div>
+
+	        <div class="col-lg-4">
+	        <h1>2nd transcation</h1>
+	            <label for="">Quantity</label>
+	            <input type="text" onchange="discount()" ; id="apple"><br><br>
+
+	           
+	            <label for="">Price of Quantity</label>
+	            <input type="text" onchange="discount()" ; id="apple_price"><br><br>
+
+	             
+	             <label for="">Total Price</label>
+	            <input type="text" onchange="discount()" ; id="tp_apple">
+
+	          <label for="">Final price</label>
+	            <input type="text" id="tapple_price">
+	        </div>
+
+	        <div class="col-lg-4">
+	        	<h1>TOTAL</h1>
+	        	
+	            <label for="">Total price of both transcation</label>
+	            <input type="text" id="two_price" onchange="discount();"><br><br>
+
+
+	             <label for="">both transcation discount</label>
+	            <input type="text" id="both_discount" onchange="discount();"><br><br>
+
+
+	              <label for="">total bill</label>
+	            <input type="text" id="bill" >
+	            </div>
+
+	    </div>
+	</div>
+
+</body>
+</html>
+<script type="text/javascript">
+	 function discount(){
+	 	var n1=Number(document.getElementById('mango').value);
+	 		var n2=Number(document.getElementById('mango_price').value);
+	 		var rs1=n1*n2;
+	 		document.getElementById('tp-mango').value=rs1;
+	 		var total_price=rs1*10/100;
+	 		document.getElementById('tmango_price').value=total_price
+
+
+	 		//2nd transition
+	 		var n1=Number(document.getElementById('apple').value);
+	 		var n2=Number(document.getElementById('apple_price').value);
+	 		var rs2=n4*n5;
+	 		document.getElementById('tp_apple').value=rs2;
+	 		var total_price2=rs2*10/100;
+	 		document.getElementById('tapple_price').value=total_price2
+
+
+	 		var n6=Number(document.getElementById('two_price').value);
+	 		var n7=Number(document.getElementById('both_discount').value);
+	 		var rs8=n6*n7;
+	 		document.getElementById('bill').value=rs3;
+	 		var total_price4=rs8*10/100;
+	 		document.getElementById('bill').value=total_price4;
+}
+</script>
+   
+

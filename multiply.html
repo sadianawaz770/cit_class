@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>multiply calculator</title>
+</head>
+<body>
+
+	<input type="text"  id="one" ><br>
+	<input type="text"  id="two"><br>
+	<input type="text"  id="three"><br>
+	
+	<button id="t"onclick="multiply()">Multiply</button><br><br><br>
+
+	<button>click here</button>
+	<input type="password" id="show">
+	<button id="new1" onclick="seepasword()">show password</button><br><br><br>
+
+	<input type="text"  id="2x" ><br>
+	<button id="twox" onclick="squareroot()">2x</button>
+	
+	
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	function multiply(){
+ 		var first=parseInt(document.getElementById("one").value);
+ 		var second=parseInt(document.getElementById("two").value);
+
+ 		var third=(first*second);
+ 		document.getElementById("three").value=third;
+ 	}
+ 	 function seepasword(){
+ 	 	document.getElementById("show").type='text';
+             }
+
+
+             function squareroot(){
+ 		var num4=document.getElementById("2x").value;
+ 		var ten=num4*2;
+ 		document.getElementById("2x").value=ten;
+ 	}
+
+
+
+
+
+
+
+ 		
+
+
+
+
+</script>

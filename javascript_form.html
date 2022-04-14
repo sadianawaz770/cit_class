@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Form</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+
+</head>
+<body>
+<div class="container">
+
+	<h1>Form</h1>
+	<button onclick="add();" class="btn btn-primary">ADD NEXT</button><br>
+			<div class="row">
+				<div class="col col-6">
+					<form id="pop" class="form_login form_group" >
+					<label>NAME</label>
+					<input type="text" class="form-control">
+			
+					<label>FATHER NAME</label>
+					<input type="text" class="form-control">
+			
+			
+		
+					<label> STUDENT.CNIC</label>
+					<input type="text" class="form-control">
+				
+					<label>ADDRESS</label>
+					<input type="text" class="form-control">
+				
+			
+					
+					<label>PHONE.NUMBER</label>
+					<input type="text" class="form-control"><br>
+				
+		 			<button  class="btn btn-success">Submit</button>
+		 				<button  class="btn btn-danger" onclick="close();">close</button>
+		
+				</div>
+			
+
+
+		</form>
+	</div>
+</body>
+</html>
+<style type="text/css">
+	.form_login{
+		display: none;
+	}
+</style>
+
+<script type="text/javascript">
+	function add() {
+		document.getElementById("pop").style.display='block';	
+	}
+	function close() {
+		document.getElementById("pop").style.display=none;	
+	}
+
+</script>

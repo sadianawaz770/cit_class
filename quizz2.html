@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FORM</title>
+	<style type="text/css">
+		.navbar{
+			background-color: lightpink;
+			border-radius: 30px;
+			text-align: center;
+		}
+		.navbar ul{
+			overflow: auto;
+			text-align: center;
+		}
+		.navbar li{
+			/*float: left;*/
+			display: inline;
+			list-style-type: none;
+			padding-top: 5px;
+			margin: 12px 20px;
+		}
+		#searchbar{
+			float: right;
+		}
+		input{
+			width: 100%;
+			padding: 8px 0px;
+			/*border: 1px solid #ccc;*/
+			 border-radius:10px; 
+		}
+		#submit{
+			background-color: green;
+			width: 100%;
+			padding: 8px 0px;
+			border: solid;
+			margin: 9px;
+		}
+		select{
+			width: 100%;
+			padding: 8px 0px;
+			border: solid;
+			border-radius: 10px;
+		}
+	</style>
+
+</head>
+<body>
+	<nav class="navbar">
+		<ul>
+			<li><a href="$">Time</a></li>
+			<li><a href="$">Home</a></li>
+			<li><a href="$">Account</a></li>
+			<li><a href="$">Task</a></li>
+			<li id="searchbar"><input placeholder="search" type="text">
+		</ul>
+	</nav>
+	</table>
+	<head>
+		<title>Table</title>
+	</head>
+	<table border="5" width="100%">
+		<tr>
+			<th>SERIAL.NO</th>
+			<th>HOME</th>
+			<th>BLOG</th>
+			<th>ABOUTS</th>
+			<th>CONTACT US</th>
+		</tr>
+		<tr>
+			<td rowspan="3">
+				<ol type="1">
+					<li>CSS</li>
+					<li>Explaination</li>
+					<li>Properties</li>
+					<li>Tags</li>
+				</ol>
+			</td>
+			<td colspan="4">CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.</td>
+		</tr>
+		<tr>
+			<th colspan="5" bgcolor="lightpink">HELP FOR YOU</th>
+		</tr>
+	</table>
+	<table border="5" width="50%">
+		<u><big><h1>Form</h1></u></big>
+		<tr>
+			<th bgcolor="lightpink"> <label>Name</label></th>
+			<td>
+				<input [type="text"]>
+			</td>
+		</tr>
+		<tr>
+			<th bgcolor="lightpink"><label>Father Name</label></th>
+		<td>
+			<input [type="text"]>
+		</td>
+		</tr>
+		<tr>
+			<th bgcolor="lightpink"><label>CNIC.NO</label></th>
+			<td>
+				<input [type="text"]></td>
+		</tr>
+		<tr>
+			<th bgcolor="lightpink"><label>Gender</label></th>
+			<td>
+				<input type="radio" name="Gender">Male
+				<input type="radio" name="Gender">Female
+			</td>
+		</tr>
+		<tr>
+			<th bgcolor="lightpink"><label>Country</label></th>
+			<td>
+				<select>
+					<option>Pakistan</option>
+					<option>America</option>
+					<option>Canada</option>
+					<option>London</option>
+					<option>India</option>
+					<option>England</option>
+					<option>Itlay</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th bgcolor="lightpink"><label>Password</label></th>
+			<td>
+				<input type="Password" placeholder="type your password">
+			</td>
+		</tr>
+		<tr>
+			<th bgcolor="lightpink"><label>E-Mail</label></th>
+			<td>
+				<input type="E-Mail" placeholder="type your E-Mail">
+			</td>
+		</tr>
+		<tr>
+			<th bgcolor="lightpink"><label>Contact.NO</label></th>
+			<td>
+				<input type="Contact.NO">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="Submit" name="">
+				<input type="Reset" name="">
+			</td>
+		</tr>
+</table><hr>
+<div>
+	<form>
+		<h1>FOR STYLING HTML FORM USE CSS</h1>
+		<label>NAME</label>
+		<input placeholder="Your Name" type="text">
+		<label>LAST NAME</label>
+		<input placeholder="Last Name" type="text">
+		<label>COUNTRY</label>
+		<select>
+			<option>Pakistan</option>
+			<option>India</option>
+			<option>Canda</option>
+			<option>France</option>
+			<option>London</option>
+			<option>England</option>
+			<option>America</option>
+			<option>Itlay</option>
+			<option>Japan</option>
+			<option>Germany</option>
+		<label>Image</label>
+		<input type="File">
+		</select>
+		<input id="submit" type="SUBMIT">
+	</form>
+</div>
+</body>
+</html>

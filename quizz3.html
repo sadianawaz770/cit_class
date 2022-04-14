@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CGPA quiz</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style type="text/css"> 
+		input{
+          	width: 200px;
+          	float: left;
+          	margin-left: 2px;
+          	border-style: solid;
+          	border-color:deeppink;
+          	height: 36px;
+          border-width: 3px;
+          border-radius: 10px;
+          }
+
+
+          body{
+          	background-color: lightskyblue;
+
+          }
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<h1>QUANTUM MECHANICS</h1>
+	           		<label for="">GRADE POINTS</label>
+					<input type="text"  onchange="calculate_GPA();" id="GP"><br><br>
+					<label for="">CREDIT HOURS</label>
+					<input type="text"  onchange="calculate_GPA();" id="CH"><br><br>
+					<label for="">TOTAL CREDIT</label>
+					<input type="text" onchange="calculate_GPA();" id="TC"><br><br><br>
+				</div>
+				<div class="col-sm-3">
+				<h1>DIGITAL ELECTRONICS</h1>
+	           		<label for="">GRADE POINTS</label>
+					<input type="text"  onchange="calculate_GPA();" id="two"><br><br>
+					<label for="">CREDIT HOURS</label>
+					<input type="text"  onchange="calculate_GPA();" id="three"><br><br>
+					<label for="">TOTAL CREDIT</label>
+					<input type="text" onchange="calculate_GPA();" id="four"><br><br><br>
+				</div>
+				<div class="col-sm-3">
+				<h1>WAVE AND OPTICS</h1>
+	           		<label for="">GRADE POINTS</label>
+					<input type="text"  onchange="calculate_GPA();" id="six"><br><br>
+					<label for="">CREDIT HOURS</label>
+					<input type="text"  onchange="calculate_GPA();" id="seven"><br><br>
+					<label for="">TOTAL CREDIT</label>
+					<input type="text" onchange="calculate_GPA();" id="eight"><br><br><br>
+				</div>
+			</div><br><br>
+			<div class="row">
+				<div class="col-lg-4 offset-3">
+					<label>CGPA</label>
+					<input type="text" onchange="calculate_GPA();" id="CA">
+				</div>
+				<div class="col-4" id="result"></div>
+			</div>
+		</div>
+
+</body>
+</html>
+<script type="text/javascript">
+	function calculate_GPA() {
+		var t1=Number(document.getElementById('GP').value);
+	 	var t2=Number(document.getElementById('CH').value);
+	 	var rs1=t1*t2;
+	 	document.getElementById('TC').value=rs1;
+	 // subject 2:
+	 	var t3=Number(document.getElementById('two').value);
+	 	var t4=Number(document.getElementById('three').value);
+	 	var rs2=t3*t4;
+	 	document.getElementById('four').value=rs2;
+	 // subject 3:
+	 	var t5=Number(document.getElementById('six').value);
+	 	var t6=Number(document.getElementById('seven').value);
+	 	var rs3=t5*t6;
+	 	document.getElementById('eight').value=rs3;
+	 // result of gpa:
+	 	var CH=t2+t4+t6;
+	 	var GPA=rs1+rs2+rs3;
+	 	var CGPA=GPA/CH;
+	 	document.getElementById('CA').value=CGPA;
+
+	 
+
+ if (CGPA>2.5){
+ 	document.getElementById('result').innerHTML="<h2>Passed</h2>;"
+ } 
+ else {
+   document.getElementById('result').innerHTML="<h2>Failed</h2>";
+	}
+}
+</script>
